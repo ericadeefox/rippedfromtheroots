@@ -2,13 +2,14 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <?= $this->Html->link('Ripped From the Roots',
-    ['controller' => 'Pages', 'action' => 'home'],
-    [
-        'class'=>'logo-no-sidebar accent-font',
-    ]);
-  ?>
-
+  <?php if ($this->request->getParam('action') != 'home'): ?>
+    <?= $this->Html->link('Ripped From the Roots',
+      ['controller' => 'Pages', 'action' => 'home'],
+      [
+          'class'=>'logo-no-sidebar accent-font',
+      ]);
+    ?>
+  <?php endif ?>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">

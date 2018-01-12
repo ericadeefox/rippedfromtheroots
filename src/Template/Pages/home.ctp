@@ -15,6 +15,7 @@
     </div>
 </div>
 <div id="home-content" align="center">
+    <?= $this->element('header') ?>
     <div class="inner-content">
         <h1>
             WHO IN FUCK ARE RIPPED FROM THE ROOTS?
@@ -27,10 +28,14 @@
         <ul>
             <li><i>"How does a community cope with making headlines for cooking meth at Walmart?"</i></li>
             <li><i>"Should you get sober after all your bandmates get mad at you on Thanksgiving in Evansville?"</i></li>
-            <li><i>"What are spoons for, really?" <u>(THEY ARE JUST FOR EATING.)</u></i></li>
+            <li><i>"What are spoons for, really?" <u>(SPOONS ARE JUST FOR EATING.)</u></i></li>
         </ul>
+        <a href="https://indianapublicradio.org/news/2017/06/heroin-takes-top-spot-in-former-meth-city-as-muncie-rallies">
+            <img src="/img/meth-city.png" alt="Montana Wildhack from Ripped From the Roots passes the microphone to Siren, “the official Ripped From the Roots baby” at Muncie’s Make Music, Not Meth."/>
+            <span class="sr-only">Heroin Takes Top Spot in Former Meth City as Muncie Rallies Against Drugs</span>
+        </a>
         <p>
-            Exploiting Monty's masterful use of the English language and Pat's ability to pull guitar riffs from his ass, Ripped From
+            Exploiting Monty's knack for storytelling and Pat's gifted way around a guitar, Ripped From
             the Roots offers commentary on the downfall, stagnation, and rebuilding of their beloved region: the Rust Belt. Their objective is to tell the
             honest truth about what it's like to live in a community nobody cares about except the people who live there. This is not just their
             story, but the collective story of all of us living in America's Hometown.
