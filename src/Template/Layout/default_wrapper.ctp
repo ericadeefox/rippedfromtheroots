@@ -35,14 +35,9 @@
         echo $this->fetch('css');
     ?>
     <?php if ($this->request->getParam('action') == 'home'): ?>
-        <?php
-            $bg = ['bg-01.jpg'];
-            $i = rand(0, count($bg)-1);
-            $selectedBg = "$bg[$i]";
-        ?>
         <style type="text/css">
             body{
-                background-image: url(img/backgrounds/<?php echo $selectedBg; ?>);
+                background-image: url(img/backgrounds/<?= $selectedBg ?>);
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-attachment: fixed;

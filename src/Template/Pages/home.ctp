@@ -9,68 +9,31 @@
         </h1>
         <h2 class="accent-font">
             <i>
-                Titty-baby Hoosier rust folk pooping back & forth forever since 2016
+                <?= $selectedTag ?>
             </i>
         </h2>
     </div>
 </div>
 <div id="home-content" align="center">
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    <h1>
-        RIPPED FROM THE ROOTS
-    </h1>
-    rftrftrftrftrftrftrftttt
+    <div class="inner-content">
+        <h1>
+            WHO IN FUCK ARE RIPPED FROM THE ROOTS?
+        </h1>
+        <p>
+            Ripped From the Roots was started in Monty & Pat's living room in the modular home down in Farmersburg in 2016
+            as a way for two friends to cope with the day-to-day realities of being Super Fucking Midwestern. Their songs were
+            written to answer questions they had about the Midwestern condition:
+        </p>
+        <ul>
+            <li><i>"How does a community cope with making headlines for cooking meth at Walmart?"</i></li>
+            <li><i>"Should you get sober after all your bandmates get mad at you on Thanksgiving in Evansville?"</i></li>
+            <li><i>"What are spoons for, really?" <u>(THEY ARE JUST FOR EATING.)</u></i></li>
+        </ul>
+        <p>
+            Exploiting Monty's masterful use of the English language and Pat's ability to pull guitar riffs from his ass, Ripped From
+            the Roots offers commentary on the downfall, stagnation, and rebuilding of their beloved region: the Rust Belt. Their objective is to tell the
+            honest truth about what it's like to live in a community nobody cares about except the people who live there. This is not just their
+            story, but the collective story of all of us living in America's Hometown.
+        </p>
+    </div>
 </div>

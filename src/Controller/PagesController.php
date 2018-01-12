@@ -30,5 +30,15 @@ class PagesController extends AppController
 {
     public function home()
     {
+        $bg = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg'];
+        $tagline = [
+            'Midwestern music for humans who love living in the Midwest',
+            'say "ope" one more time motherfucker',
+            "Indiana's favorite shitpost country band"
+        ];
+        $i = rand(0, count($bg)-1);
+        $selectedBg = "$bg[$i]";
+        $selectedTag = "$tagline[$i]";
+        $this->set(compact('selectedBg', 'selectedTag'));
     }
 }

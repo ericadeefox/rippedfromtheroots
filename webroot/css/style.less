@@ -201,9 +201,15 @@ p {
 // home
 #home-content {
     background-color: #000000;
+    display: table;
+    min-height: 100vh;
+    padding: 10%;
     position: relative;
     top: 100vh;
     width: 100%;
+    ul {
+        list-style: none;
+    }
 }
 #home-header {
     align-items: center;
@@ -213,8 +219,6 @@ p {
     position: absolute;
     width: 100%;
     .inner-header {
-        display: table-cell;
-        vertical-align: middle;
         h1 {
             color: #FFF;
             font-size: 100px;
@@ -224,6 +228,11 @@ p {
             font-size: 50px;
         }
     }
+}
+.inner-header,
+.inner-content {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 // talks
