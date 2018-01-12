@@ -21,9 +21,9 @@
             WHO IN FUCK ARE RIPPED FROM THE ROOTS?
         </h1>
         <p>
-            Ripped From the Roots was started in Monty & Pat's living room in the modular home down in Farmersburg in 2016
-            as a way for two friends to cope with the day-to-day realities of being Super Fucking Midwestern. Their songs were
-            written to answer questions they had about the Midwestern condition:
+            Ripped From the Roots is just some bogus two-piece folk/country band. It was started in Monty & Pat's living room in
+            the modular home down in Farmersburg in 2016 as a way for two friends to cope with the day-to-day realities of being Super Fucking Midwestern.
+            Their songs were written to answer questions they had about the Midwestern condition:
         </p>
         <ul>
             <li><i>"How does a community cope with making headlines for cooking meth at Walmart?"</i></li>
@@ -31,16 +31,13 @@
             <li><i>"What are spoons for, really?" <u>(SPOONS ARE JUST FOR EATING.)</u></i></li>
         </ul>
         <div class="row">
-            <div class="col-lg-4">
-                <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5bc6becb8ee85cc3b4b114b63b576663.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-            </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <a href="https://indianapublicradio.org/news/2017/06/heroin-takes-top-spot-in-former-meth-city-as-muncie-rallies">
                     <img src="/img/meth-city.png" alt="Montana Wildhack from Ripped From the Roots passes the microphone to Siren, “the official Ripped From the Roots baby” at Muncie’s Make Music, Not Meth."/>
                     <span class="sr-only">Heroin Takes Top Spot in Former Meth City as Muncie Rallies Against Drugs</span>
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <iframe src="https://embed.spotify.com/?uri=spotify%3Aartist%3A6xs0eBsjTS2XTSDwHhMiSu" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
             </div>
         </div>
