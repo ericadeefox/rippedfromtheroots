@@ -14,7 +14,7 @@
         "twbs/bootstrap": "dev-master",
         "akkaweb/cakephp-ckeditor": "dev-master",
         "oldskool/cakephp-js": "dev-master",
-        "josegonzalez/cakephp-upload": "^3.6"
+        "josegonzalez/cakephp-upload": "^3.7"
     },
     "require-dev": {
         "psy/psysh": "@stable",

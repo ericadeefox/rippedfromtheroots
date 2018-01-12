@@ -11,10 +11,6 @@
 @large: ~"(min-width: 992px) and (max-width: 1200px)";
 @x-large: ~"(min-width: 1200px)";
 
-@anim: 5s ease-in-out infinite alternate;
-@neon1: neon1 @anim;
-@neon2: neon2 @anim;
-
 // universal stuff
 img {
     padding: 10px;
@@ -33,7 +29,7 @@ h5 a {
 }
 
 a {
-    color: #66cc99;
+    color: #120000;
 }
 
 h1,
@@ -42,27 +38,20 @@ h1,
 }
 
 // layout
-.header-link,
-.logo-no-sidebar {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
 a:active,
 a:hover {
-    color: #999;
-    text-decoration: none;
+    color: #999 !important;
+    text-decoration: none !important;
 }
 
 .article {
-    border-radius: 1pc;
     border-bottom: #FFFFFF 1px solid;
     margin: 25px 10px;
     padding: 20px;
 }
 
 body {
-    background-color: #000000;
+    background-color: #767676;
     background-size: 100% 100%;
     color: #FFFFFF;
     font-family: @TextFont;
@@ -70,7 +59,6 @@ body {
 }
 
 .content {
-    border-radius: 1pc;
     border-bottom: #FFFFFF 1px solid;
     margin: 10px auto;
     padding: 20px;
@@ -98,6 +86,12 @@ body {
     z-index: 999;
 }
 
+.header-link,
+.logo-no-sidebar {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .header-link {
     color: #ffffff !important;
     font-size: 25px;
@@ -107,34 +101,14 @@ body {
     text-decoration: underline;
 }
 
-@keyframes neon1 {
-    0% {
-        text-shadow: 0px 0px 5px #eee;
-    }
-    100% {
-        text-shadow: 0px 0px 50px #eee;
-    }
-}
-
-@keyframes neon2 {
-    0% {
-        text-shadow: 0px 0px 0px #FFFFFF;
-    }
-    100% {
-        text-shadow: 0px 0px 100px #FFFFFF;
-    }
-}
-
 .icon {
     padding: 0px;
 }
 
 .logo-no-sidebar {
-    animation: @neon2;
-    -moz-animation: @neon2;
-    -webkit-animation: @neon2;
     color: #FFFFFF;
     font-size: 35px;
+    font-weight: 700;
     position: relative;
     white-space: nowrap;
     z-index: 999;
@@ -143,19 +117,13 @@ body {
     text-decoration: none;
 }
 
-.logo-with-sidebar {
-    animation: @neon1;
-    -moz-animation: @neon1;
-    -webkit-animation: @neon1;
-    color: #eee;
-    font-size: 50px;
-    margin: 10px;
-    white-space: nowrap;
-    width: 50%;
-    z-index: 999;
-}
-#logo:hover {
-    text-decoration: none;
+.navbar {
+    background-color: #000000;
+    img {
+        height: 50px !important;
+        padding: 5px;
+        width: 50px !important;
+    }
 }
 
 .nav-item {
@@ -207,11 +175,15 @@ p {
     top: 100vh;
     width: 100%;
     img {
-        height: 350px;
-        width: auto;
+        height: auto;
+        width: 100%;
+        transition: all .2s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.2, 1.2);
     }
     .inner-content {
-        padding: 10%;
+        padding: 5%;
     }
     nav {
         position: absolute;

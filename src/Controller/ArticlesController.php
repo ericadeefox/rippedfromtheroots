@@ -1,17 +1,25 @@
 <?php
 namespace App\Controller;
 
-use App\Controller\AppController;
-
 /**
  * Articles Controller
  *
  * @property \App\Model\Table\ArticlesTable $Articles
  *
- * @method \App\Model\Entity\Article[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\Article[]
  */
 class ArticlesController extends AppController
 {
+    /**
+     * initialize method
+     *
+     * @return void
+     */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['index', 'view']);
+    }
 
     /**
      * Index method
@@ -20,9 +28,29 @@ class ArticlesController extends AppController
      */
     public function index()
     {
-        $articles = $this->paginate($this->Articles);
+        $this->paginate = [];
+        $articles = $this->paginate(
+            $this->Articles->getRecentArticles()
+        );
 
         $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
+    }
+
+    /**
+     * drafts method
+     *
+     * @return \Cake\Http\Response|void
+     */
+    public function drafts()
+    {
+        $this->paginate = [];
+        $articles = $this->paginate(
+            $this->Articles->getDrafts()
+        );
+
+        $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
     }
 
     /**
@@ -34,11 +62,10 @@ class ArticlesController extends AppController
      */
     public function view($id = null)
     {
-        $article = $this->Articles->get($id, [
-            'contain' => []
-        ]);
+        $article = $this->Articles->get($id);
 
         $this->set('article', $article);
+        $this->set('_serialize', ['article']);
     }
 
     /**
@@ -50,15 +77,22 @@ class ArticlesController extends AppController
     {
         $article = $this->Articles->newEntity();
         if ($this->request->is('post')) {
-            $article = $this->Articles->patchEntity($article, $this->request->getData());
+            $data = $this->request->getData();
+            $article = $this->Articles->patchEntity($article, $data);
+            $date = $data['date']['year'] . '-' . $data['date']['month'] . '-' . $data['date']['day'] . ' ' . date('H:i:s');
+            $article->date = $date;
             if ($this->Articles->save($article)) {
-                $this->Flash->success(__('The article has been saved.'));
+                $this->Flash->success(__('The blog post has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The article could not be saved. Please, try again.'));
+            $this->Flash->error(__('The blog post could not be saved. Please, try again.'));
         }
-        $this->set(compact('article'));
+        $titleForLayout = 'Add a New Post';
+        $this->set(compact('article', 'titleForLayout'));
+        $this->set('_serialize', ['article']);
+
+        return null;
     }
 
     /**
@@ -70,19 +104,24 @@ class ArticlesController extends AppController
      */
     public function edit($id = null)
     {
-        $article = $this->Articles->get($id, [
-            'contain' => []
-        ]);
+        $article = $this->Articles->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $article = $this->Articles->patchEntity($article, $this->request->getData());
+            $data = $this->request->getData();
+            $article = $this->Articles->patchEntity($article, $data);
+            $date = $data['date']['year'] . '-' . $data['date']['month'] . '-' . $data['date']['day'] . ' ' . date('H:i:s');
+            $article->date = $date;
             if ($this->Articles->save($article)) {
-                $this->Flash->success(__('The article has been saved.'));
+                $this->Flash->success(__('The blog post has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The article could not be saved. Please, try again.'));
+            $this->Flash->error(__('The blog post could not be saved. Please, try again.'));
         }
-        $this->set(compact('article'));
+        $titleForLayout = 'Edit Post: ' . $article->title;
+        $this->set(compact('article', 'titleForLayout'));
+        $this->set('_serialize', ['article']);
+
+        return null;
     }
 
     /**
@@ -94,7 +133,6 @@ class ArticlesController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
         $article = $this->Articles->get($id);
         if ($this->Articles->delete($article)) {
             $this->Flash->success(__('The article has been deleted.'));

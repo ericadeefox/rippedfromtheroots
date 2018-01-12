@@ -33,6 +33,11 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => [
+                'path' => 'webroot' . DS . 'img' . DS . 'users'
+            ]
+        ]);
     }
 
     /**

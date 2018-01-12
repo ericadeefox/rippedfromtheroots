@@ -99,6 +99,8 @@ Router::scope('/', function (RouteBuilder $routes) {
         ['controller' => 'Shows', 'action' => 'view'],
         ['id' => '[0-9]+', 'pass' => ['id']]
     );
+
+    $routes->connect('/login', ['controller' => 'Users', 'action' => 'login']);
 });
 
 /**

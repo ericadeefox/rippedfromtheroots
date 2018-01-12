@@ -28,6 +28,12 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['Home']);
+    }
+
     public function home()
     {
         $bg = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg'];

@@ -30,10 +30,20 @@
             <li><i>"Should you get sober after all your bandmates get mad at you on Thanksgiving in Evansville?"</i></li>
             <li><i>"What are spoons for, really?" <u>(SPOONS ARE JUST FOR EATING.)</u></i></li>
         </ul>
-        <a href="https://indianapublicradio.org/news/2017/06/heroin-takes-top-spot-in-former-meth-city-as-muncie-rallies">
-            <img src="/img/meth-city.png" alt="Montana Wildhack from Ripped From the Roots passes the microphone to Siren, “the official Ripped From the Roots baby” at Muncie’s Make Music, Not Meth."/>
-            <span class="sr-only">Heroin Takes Top Spot in Former Meth City as Muncie Rallies Against Drugs</span>
-        </a>
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5bc6becb8ee85cc3b4b114b63b576663.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+            </div>
+            <div class="col-lg-4">
+                <a href="https://indianapublicradio.org/news/2017/06/heroin-takes-top-spot-in-former-meth-city-as-muncie-rallies">
+                    <img src="/img/meth-city.png" alt="Montana Wildhack from Ripped From the Roots passes the microphone to Siren, “the official Ripped From the Roots baby” at Muncie’s Make Music, Not Meth."/>
+                    <span class="sr-only">Heroin Takes Top Spot in Former Meth City as Muncie Rallies Against Drugs</span>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <iframe src="https://embed.spotify.com/?uri=spotify%3Aartist%3A6xs0eBsjTS2XTSDwHhMiSu" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </div>
         <p>
             Exploiting Monty's knack for storytelling and Pat's gifted way around a guitar, Ripped From
             the Roots offers commentary on the downfall, stagnation, and rebuilding of their beloved region: the Rust Belt. Their objective is to tell the

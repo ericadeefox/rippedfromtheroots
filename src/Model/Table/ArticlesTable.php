@@ -1,7 +1,6 @@
 <?php
 namespace App\Model\Table;
 
-use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
@@ -31,7 +30,7 @@ class ArticlesTable extends Table
         parent::initialize($config);
 
         $this->setTable('articles');
-        $this->setDisplayField('id');
+        $this->setDisplayField('title');
         $this->setPrimaryKey('id');
     }
 
@@ -50,11 +49,22 @@ class ArticlesTable extends Table
 
         $validator
             ->dateTime('date')
-            ->allowEmpty('date');
+            ->requirePresence('date', 'create')
+            ->notEmpty('date');
+
+        $validator
+            ->scalar('title')
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
 
         $validator
             ->scalar('body')
-            ->allowEmpty('body');
+            ->requirePresence('body', 'create')
+            ->notEmpty('body');
+
+        $validator
+            ->dateTime('edited')
+            ->allowEmpty('edited');
 
         return $validator;
     }
@@ -71,5 +81,35 @@ class ArticlesTable extends Table
         $rules->add($rules->isUnique(['id']));
 
         return $rules;
+    }
+
+    /*
+     * getRecentArticles function
+     *
+     * return Cake\ORM\Query
+     */
+    public function getRecentArticles()
+    {
+        $articles = $this
+            ->find()
+            ->where(['date <=' => date('Y-m-d H:i:s')])
+            ->order(['date' => 'DESC']);
+
+        return $articles;
+    }
+
+    /*
+     * getRecentArticles function
+     *
+     * return Cake\ORM\Query
+     */
+    public function getDrafts()
+    {
+        $articles = $this
+            ->find()
+            ->where(['date >' => date('Y-m-d H:i:s')])
+            ->order(['date' => 'ASC']);
+
+        return $articles;
     }
 }

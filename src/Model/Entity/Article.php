@@ -8,7 +8,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property \Cake\I18n\FrozenTime $date
+ * @property string $title
  * @property string $body
+ *
  */
 class Article extends Entity
 {
@@ -24,6 +26,7 @@ class Article extends Entity
      */
     protected $_accessible = [
         'date' => true,
+        'title' => true,
         'body' => true
     ];
 }
