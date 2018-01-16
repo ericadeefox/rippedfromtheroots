@@ -27,10 +27,6 @@
     </h3>
     <h6><?= date('F jS, Y', strtotime($article->date)) ?></h6>
     <?= $article->body ?>
-    <?= $this->Html->link('Read more', [
-        'controller' => 'Articles',
-        'action' => 'view', $article->id, $slug
-    ]) ?>
     <h6>
         <?php if ($loggedIn): ?>
             <?= $this->Html->link('Edit this post?', [
