@@ -26,12 +26,7 @@
         ]) ?>
     </h3>
     <h6><?= date('F jS, Y', strtotime($article->date)) ?></h6>
-    <?php for ($x = 0; $x <= 100; $x++): ?>
-        <?php $y = strlen($preview[$x]) ?>
-        <?php $y = $y - 1 ?>
-        <?php $lastWord = substr($preview[$x], 0, -$y) . '...' ?>
-        <?= $x != 15 ? $preview[$x] : $lastWord ?>
-    <?php endfor ?>
+    <?= $article->body ?>
     <?= $this->Html->link('Read more', [
         'controller' => 'Articles',
         'action' => 'view', $article->id, $slug
