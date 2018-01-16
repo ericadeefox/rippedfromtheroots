@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light">
+<nav class="navbar navbar-toggleable-md navbar-dark">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,19 +16,24 @@
               <?= $this->Html->link('News', ['controller' => 'Articles', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
           </li>
           <li class="nav-item">
-              <?= $this->Html->link('Shows', ['controller' => 'Shows', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
-          </li>
-          <li class="nav-item">
-              <?= $this->Html->link('Music', ['controller' => 'Albums', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
-          </li>
-          <li class="nav-item">
               <?= $this->Html->link('Photos', ['controller' => 'Photos', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
           </li>
           <li class="nav-item">
-              <?= $this->Html->link('Merch', ['controller' => 'Merch', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
+              <a href="mailto:rippedfromtheroots@gmail.com" class="nav-link header-link">
+                  Email us
+              </a>
           </li>
+          <!--li class="nav-item">
+              <!?= $this->Html->link('Shows', ['controller' => 'Shows', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
+          </li>
+          <li class="nav-item">
+              <!?= $this->Html->link('Music', ['controller' => 'Albums', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
+          </li>
+          <li class="nav-item">
+              <!?= $this->Html->link('Merch', ['controller' => 'Merch', 'action' => 'index'], ['class'=>'nav-link header-link']) ?>
+          </li-->
       </ul>
-      <ul class="navbar-nav float-right">
+      <ul class="navbar-nav fl">
           <li class="nav-item">
               <a href="https://www.facebook.com/rippedfromtheroots">
                   <img src="/img/icons/facebook.png" />

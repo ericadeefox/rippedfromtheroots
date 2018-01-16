@@ -12,6 +12,11 @@ use App\Controller\AppController;
  */
 class PhotosController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['index']);
+    }
 
     /**
      * Index method
@@ -20,9 +25,10 @@ class PhotosController extends AppController
      */
     public function index()
     {
-        $photos = $this->paginate($this->Photos);
+        $photos = $this->Photos->find()->toArray();
+        $count = $this->Photos->find()->count();
 
-        $this->set(compact('photos'));
+        $this->set(compact('count', 'photos'));
     }
 
     /**

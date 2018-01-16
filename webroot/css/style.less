@@ -189,12 +189,28 @@ p {
         position: absolute;
         top: 0;
         width: 100%;
+        @media @x-small {
+            min-height: 50px;
+            top: -25px;
+        }
         .navbar-nav {
             margin: 0 auto;
+        }
+        .navbar-toggler {
+            border-color: #FFFFFF !important;
+        }
+        .fl {
+            @media @large {
+                float: right;
+            }
+            @media @x-large {
+                float: right;
+            }
         }
     }
     ul {
         list-style: none;
+        padding-left: 0px;
     }
 }
 #home-header {
@@ -208,10 +224,22 @@ p {
         h1 {
             color: #FFF;
             font-size: 100px;
+            @media @small {
+                font-size: 50px;
+            }
+            @media @x-small {
+                font-size: 50px;
+            }
         }
         h2 {
             color: #FFF;
             font-size: 50px;
+            @media @small {
+                font-size: 25px;
+            }
+            @media @x-small {
+                font-size: 25px;
+            }
         }
     }
 }
